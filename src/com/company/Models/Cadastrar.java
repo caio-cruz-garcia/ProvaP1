@@ -5,9 +5,9 @@ import com.company.Enum.Status;
 
 import java.util.Random;
 
-public class Cadastrar {
+public  class Cadastrar {
     private String id;
-    public String descricao;
+    private String descricao;
     private Pagamento value;
     private Status status;
 
