@@ -3,9 +3,9 @@ package com.company.Models;
 public class Usuario {
     private String name;
     private String email;
-    private String senha;
+    private int senha;
 
-    public Usuario(String name, String email, String senha) {
+    public Usuario(String name, String email, int senha) {
         this.name = name;
         this.email = email;
         this.senha = senha;
@@ -19,7 +19,7 @@ public class Usuario {
         return email;
     }
 
-    public String getSenha() {
+    public int getSenha() {
         return senha;
     }
 
@@ -31,7 +31,7 @@ public class Usuario {
         this.email = email;
     }
 
-    public void setSenha(String senha) {
+    public void setSenha(int senha) {
         this.senha = senha;
     }
 

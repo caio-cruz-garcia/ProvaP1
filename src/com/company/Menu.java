@@ -14,6 +14,25 @@ public class Menu {
             System.out.println("0- Sair");
             int menu = scanner.nextInt();
 
+            switch (menu){
+                case 1:
+
+
+                break;
+                case 2:
+
+
+                break;
+                case 3:
+
+
+                break;
+                case 4:
+                    run = false;
+                break;
+                default:
+                    break;
+            }
         }
     }
 }

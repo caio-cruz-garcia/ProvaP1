@@ -34,8 +34,7 @@ public  class Cadastrar {
         return idGerado;
     }
 
-    public String getIdGerado() {
+    public String getId() {
         return id;
     }
-
 }
