@@ -2,7 +2,8 @@ package com.company.Models;
 
 import com.company.Enum.Status;
 
-public class AlterarPedidos {
+
+public  class AlterarPedidos  {
     private Status status;
     private int id;
 
