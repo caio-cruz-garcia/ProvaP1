@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Descricao implements VerStatus, AlterarStatus {
+    private List<Pizza> pizzas;
     private List<VerificarPedidos> verificarPedidosList;
     private List<AlterarPedidos> alterarPedidosList;
 
@@ -91,7 +92,7 @@ public class Descricao implements VerStatus, AlterarStatus {
             for (int verificarPedidos = 0; verificarPedidos < 5; verificarPedidos++) {
                 newPizzas.add(new Pizza(tiposPizza, verificarPedidos));
             }
-            return newPizzas;
         }
+        return newPizzas;
     }
 }

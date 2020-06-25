@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class Menu {
     final static Scanner scanner = new Scanner(System.in);
+    private static List<Pizza> pizzas = new ArrayList<>();
     private List<Descricao> descricao = new ArrayList<>();
     private List<Cadastrar> cadastraru  = new ArrayList<>();
     private List<String> pagamentos  = new ArrayList<>();
@@ -64,6 +65,13 @@ public class Menu {
         System.out.println("Size: " +mudarStatus.size());
         for (AlterarPedidos alterarPedidos: mudarStatus) {
             System.out.println(mudarStatus);
+        }
+    }
+    public void novaVenda(){
+        if(!usuaioNovo().autenticarSenha()){
+            System.out.println("Operacao nao permitida - senha invalida ");
+        } else{
+
         }
     }
 }
