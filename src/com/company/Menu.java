@@ -21,6 +21,9 @@ public class Menu {
     private List<String> pagamentos  = new ArrayList<>();
     private List<String> status = new ArrayList<>();
 
+    /**
+     * Cria um menu usando switch case dentro de um looping while.
+     */
     public static void run(){
         System.out.println("Pizzaria o Rato que Ri:");
         boolean run = true;
@@ -33,7 +36,7 @@ public class Menu {
 
             switch (menu){
                 case 1:
-//                    Usuario usuario = usuaioNovo();
+//                    Usuario usuario = usuarioNovo();
 //                    //var1.novaVenda();
 
                 break;
@@ -57,22 +60,36 @@ public class Menu {
             }
         }
     }
-//    public static Usuario usuaioNovo(){
+    /**
+     * @param usuarioNovo cria um usuario com nome email e senha.
+     */
+
+//    public static Usuario usuarioNovo(){
 //        Usuario usuario = new Usuario("Caio","caiogarcia96@hotmail.com","123456");
 //        return usuario;
 //    }
+    /**
+     * @param verStatus ver o tamanho da lsta de pedidos implementada no problema.
+     */
     public static void verPedidos(List<VerificarPedidos> verStatus){
         System.out.println("Size: " +verStatus.size());
         for (VerificarPedidos verificarPedidos: verStatus) {
             System.out.println(verStatus);
         }
     }
+
+    /**
+     * @param mudarStatus ver o tamanho da lista alterando o pedido.
+     */
     public static void trocarPedidos(List<AlterarPedidos> mudarStatus){
         System.out.println("Size: " +mudarStatus.size());
         for (AlterarPedidos alterarPedidos: mudarStatus) {
             System.out.println(mudarStatus);
         }
     }
+    /**
+     * @param novaVenda criaria um pedido de pizza com uma determinado usuario.
+     */
 //    public void novaVenda(){
 //        if(!usuaioNovo().autenticarSenha()){
 //            System.out.println("Operacao nao permitida - senha invalida ");

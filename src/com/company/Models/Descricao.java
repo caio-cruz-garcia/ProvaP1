@@ -24,11 +24,19 @@ public class Descricao implements VerStatus, AlterarStatus {
     private List<VerificarPedidos> verificarPedidosList;
     private List<AlterarPedidos> alterarPedidosList;
 
+    /**
+     * @param verificarPedidosList enumeração da verificação da lista.
+     * @param alterarPedidosList enumeração da alteração da lista.
+     */
     public Descricao(List<VerificarPedidos> verificarPedidosList, List<AlterarPedidos> alterarPedidosList) {
         this.verificarPedidosList = verificarPedidosList;
         this.alterarPedidosList = alterarPedidosList;
     }
 
+    /**
+     * @param mudarStatus muda o estado da pizza comnforme um hashMap.
+     * @return a condição em que se encontra a pizza.
+     */
     @Override
     public Status alterarStatus(List<AlterarPedidos> mudarStatus) {
         Status statusvalue = Status.NONE;
@@ -59,6 +67,10 @@ public class Descricao implements VerStatus, AlterarStatus {
         return statusvalue;
     }
 
+    /**
+     * @param verStatus visualiza o estado da pizza conforme um hashMap.
+     * @return a condição em que se encontra a pizza.
+     */
     @Override
     public Status checkStatus(List<VerificarPedidos> verStatus) {
         Status statusvalue = Status.NONE;
@@ -88,13 +100,23 @@ public class Descricao implements VerStatus, AlterarStatus {
         return statusvalue;
     }
 
+    /**
+     * @return Getter para a enumeração do verificar pedidos.
+     */
     public List<VerificarPedidos> getVerificarPedidosList() {
         return verificarPedidosList;
     }
 
+    /**
+     * @return Getter para a enumeração do alterar pedidos.
+     */
     public List<AlterarPedidos> getAlterarPedidosList() {
         return alterarPedidosList;
     }
+
+    /**
+     * @return a quantidade de pizzas pedidas dentro de uma lista.
+     */
     public List<Pizza> pizzas() {
         List<Pizza> newPizzas = new ArrayList<Pizza>();
         for (Tipos tiposPizza : Tipos.values()) {

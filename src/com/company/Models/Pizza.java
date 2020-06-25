@@ -13,15 +13,25 @@ public class Pizza {
     public Tipos nome;
     public double valor;
 
+    /**
+     * @param nome enumeração que define o nome da pizza.
+     * @param valor enumeração do valor da pizza.
+     */
     public Pizza(Tipos nome, double valor) {
         this.nome = nome;
         this.valor = valor;
     }
 
+    /**
+     * @return Getter da enumeração da pizza.
+     */
     public Tipos getNome() {
         return nome;
     }
 
+    /**
+     * @return Getter da enumeração da pizza.
+     */
     public double getValor() {
         return valor;
     }
