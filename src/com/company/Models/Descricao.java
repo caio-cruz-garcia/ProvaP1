@@ -16,14 +16,6 @@ public class Descricao implements VerStatus, AlterarStatus {
         this.alterarPedidosList = alterarPedidosList;
     }
 
-    public List<VerificarPedidos> getVerificarPedidosList() {
-        return verificarPedidosList;
-    }
-
-    public List<AlterarPedidos> getAlterarPedidosList() {
-        return alterarPedidosList;
-    }
-
     @Override
     public Status alterarStatus(List<AlterarPedidos> mudarStatus) {
         Status statusvalue = Status.NONE;
@@ -81,5 +73,13 @@ public class Descricao implements VerStatus, AlterarStatus {
             statusvalue = Status.NONE;
         }
         return statusvalue;
+    }
+
+    public List<VerificarPedidos> getVerificarPedidosList() {
+        return verificarPedidosList;
+    }
+
+    public List<AlterarPedidos> getAlterarPedidosList() {
+        return alterarPedidosList;
     }
 }
