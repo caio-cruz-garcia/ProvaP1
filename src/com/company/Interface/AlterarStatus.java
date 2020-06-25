@@ -6,5 +6,5 @@ import com.company.Models.AlterarPedidos;
 import java.util.List;
 
 public interface AlterarStatus {
-    Status alterarStatus(List<AlterarPedidos> alterarStatus);
+    Status alterarStatus(List<AlterarPedidos> mudarStatus);
 }

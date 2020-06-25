@@ -25,13 +25,13 @@ public class Descricao implements VerStatus, AlterarStatus {
     }
 
     @Override
-    public Status alterarStatus(List<AlterarPedidos> alterarStatus) {
+    public Status alterarStatus(List<AlterarPedidos> mudarStatus) {
         Status statusvalue = Status.NONE;
         HashMap<Status,Integer> StatusMap = new HashMap<>();
         for (Status status:Status.values()) {
             StatusMap.put(status, 0);
         }
-        for (AlterarPedidos alterarPedidos:alterarStatus) {
+        for (AlterarPedidos alterarPedidos:mudarStatus) {
             StatusMap.replace(alterarPedidos.getStatus(), StatusMap.get(alterarPedidos.getStatus())+1);
         }
         StatusMap.forEach((Status_hashMapKey,integer_hashMapKey)-> {
