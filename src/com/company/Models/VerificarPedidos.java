@@ -1,17 +1,18 @@
 package com.company.Models;
 
+import com.company.Enum.Pagamento;
 import com.company.Enum.Status;
 
 public class VerificarPedidos  {
-    private Status status;
+    private Pagamento status;
     private int id;
 
-    public VerificarPedidos(Status status, int id) {
+    public VerificarPedidos(Pagamento status, int id) {
         this.status = status;
         this.id = id;
     }
 
-    public Status getStatus() {
+    public Pagamento getStatus() {
         return status;
     }
 

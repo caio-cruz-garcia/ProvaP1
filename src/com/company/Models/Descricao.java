@@ -1,5 +1,6 @@
 package com.company.Models;
 
+import com.company.Enum.Pagamento;
 import com.company.Enum.Status;
 import com.company.Interface.AlterarStatus;
 import com.company.Interface.VerStatus;
@@ -19,8 +20,8 @@ public class Descricao implements VerStatus, AlterarStatus {
     @Override
     public Status alterarStatus(List<AlterarPedidos> mudarStatus) {
         Status statusvalue = Status.NONE;
-        HashMap<Status,Integer> StatusMap = new HashMap<>();
-        for (Status status:Status.values()) {
+        HashMap<Pagamento,Integer> StatusMap = new HashMap<>();
+        for (Pagamento status:Pagamento.values()) {
             StatusMap.put(status, 0);
         }
         for (AlterarPedidos alterarPedidos:mudarStatus) {
@@ -49,8 +50,8 @@ public class Descricao implements VerStatus, AlterarStatus {
     @Override
     public Status checkStatus(List<VerificarPedidos> verStatus) {
         Status statusvalue = Status.NONE;
-        HashMap<Status,Integer> StatusMap = new HashMap<>();
-        for (Status status:Status.values()) {
+        HashMap<Pagamento,Integer> StatusMap = new HashMap<>();
+        for (Pagamento status:Pagamento.values()) {
             StatusMap.put(status,0);
         }
         for (VerificarPedidos verificarPedidos:verStatus) {
