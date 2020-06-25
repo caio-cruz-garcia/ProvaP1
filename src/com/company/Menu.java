@@ -28,7 +28,7 @@ public class Menu {
             switch (menu){
                 case 1:
                     Usuario usuario = usuaioNovo();
-
+                    var1.novaVenda();
 
                 break;
                 case 2:
@@ -71,7 +71,8 @@ public class Menu {
         if(!usuaioNovo().autenticarSenha()){
             System.out.println("Operacao nao permitida - senha invalida ");
         } else{
-
+            boolean var1 = true;
+            
         }
     }
 }
