@@ -6,7 +6,7 @@ import com.company.Enum.Status;
 import java.util.Random;
 
 public  class Cadastrar {
-    private String id;
+    private String id = this.geradorID();
     private String descricao;
     private Pagamento value;
     private Status status;

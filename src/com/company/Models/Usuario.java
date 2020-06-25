@@ -1,14 +1,26 @@
 package com.company.Models;
 
-public class Usuario {
+import com.company.Interface.Autenticar;
+
+import java.util.Scanner;
+
+public class Usuario implements Autenticar {
     private String name;
     private String email;
-    private int senha;
+    private String senha = "123456";
 
-    public Usuario(String name, String email, int senha) {
+    public Usuario(String name, String email, String senha) {
         this.name = name;
         this.email = email;
         this.senha = senha;
+    }
+
+    public boolean autenticarSenha(){
+        Scanner name = new Scanner(System.in);
+        System.out.println("Digite a senha: ");
+        String email = name.nextLine();
+        System.out.println(email.equals(this.senha));
+        return email.equals(this.senha);
     }
 
     public String getName() {
@@ -19,20 +31,8 @@ public class Usuario {
         return email;
     }
 
-    public int getSenha() {
+    public String getSenha() {
         return senha;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setSenha(int senha) {
-        this.senha = senha;
     }
 
     @Override
