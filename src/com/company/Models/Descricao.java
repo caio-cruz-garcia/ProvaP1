@@ -4,6 +4,7 @@ import com.company.Enum.Status;
 import com.company.Interface.AlterarStatus;
 import com.company.Interface.VerStatus;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class Descricao implements VerStatus, AlterarStatus {
@@ -25,7 +26,32 @@ public class Descricao implements VerStatus, AlterarStatus {
 
     @Override
     public Status alterarStatus(List<AlterarPedidos> alterarStatus) {
-        return null;
+        Status statusvalue = Status.NONE;
+        HashMap<Status,Integer> StatusMap = new HashMap<>();
+        for (Status status:Status.values()) {
+            StatusMap.put(status, 0);
+        }
+        for (AlterarPedidos alterarPedidos:alterarStatus) {
+            StatusMap.replace(alterarPedidos.getStatus(), StatusMap.get(alterarPedidos.getStatus())+1);
+        }
+        StatusMap.forEach((Status_hashMapKey,integer_hashMapKey)-> {
+            System.out.println("Chave: "+ Status_hashMapKey + "Value: "+integer_hashMapKey);
+        });
+
+        if(StatusMap.containsValue(5)){
+            statusvalue = Status.DEVOLVIDO;
+        } else if (StatusMap.containsValue(4)){
+            statusvalue = Status.ENTREGUE;
+        } else if (StatusMap.containsValue(3)){
+            statusvalue = Status.PREPARACAO;
+        } else if (StatusMap.containsValue(2)){
+            statusvalue = Status.REALIZADO;
+        } else if (StatusMap.containsValue(1)){
+            statusvalue = Status.SAIU_PARA_ENTREGA;
+        } else{
+            statusvalue = Status.NONE;
+        }
+        return statusvalue;
     }
 
     @Override
