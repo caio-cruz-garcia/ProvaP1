@@ -10,6 +10,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ *  Classe ponto de entrada da aplicação base.<br>
+ *     Ela é responsável pela Descrição do pedido de pizza,implementando duas interfaces de controle.
+ *     VerStatus permite olhar o pagamento e a condição.
+ *     AlterarStatus permite olhar o pagamento e caso seja necessario uma troca no pedido.
+ * @author Caio Cruz Alfonso Garcia - caiogarcia96@hotmail.com
+ * @since 25/06/2020
+ * @version 1.0
+ */
 public class Descricao implements VerStatus, AlterarStatus {
     private List<Pizza> pizzas;
     private List<VerificarPedidos> verificarPedidosList;

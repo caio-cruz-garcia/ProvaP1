@@ -1,12 +1,18 @@
 package com.company;
-
-import com.company.Interface.VerStatus;
 import com.company.Models.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Classe ponto de entrada da aplicação base.<br>
+ *     Ela é responsável a dar o inicio da aplicação, criando as instancias dos objetos por meio dela.
+ *     Pórem está incompleta
+ * @author Caio Cruz Alfonso Garcia - caiogarcia96@hotmail.com
+ * @since 25/06/2020
+ * @version 1.0
+ */
 public class Menu {
     final static Scanner scanner = new Scanner(System.in);
     private static List<Pizza> pizzas = new ArrayList<>();
@@ -27,20 +33,20 @@ public class Menu {
 
             switch (menu){
                 case 1:
-                    Usuario usuario = usuaioNovo();
-                    var1.novaVenda();
+//                    Usuario usuario = usuaioNovo();
+//                    //var1.novaVenda();
 
                 break;
                 case 2:
-                    Descricao pedido = new Descricao(,);
-                    verPedidos(pedido.getVerificarPedidosList());
-                    System.out.println("Pedidos"+pedido.checkStatus(pedido.getVerificarPedidosList()));
+//                    Descricao pedido = new Descricao(,);
+//                    verPedidos(pedido.getVerificarPedidosList());
+//                    System.out.println("Pedidos"+pedido.checkStatus(pedido.getVerificarPedidosList()));
 
                 break;
                 case 3:
-                    Descricao pedido1 = new Descricao(,);
-                    trocarPedidos(pedido1.getAlterarPedidosList());
-                    System.out.println("Pedidos"+pedido1.alterarStatus(pedido1.getAlterarPedidosList()));
+//                    Descricao pedido1 = new Descricao(,);
+//                    trocarPedidos(pedido1.getAlterarPedidosList());
+//                    System.out.println("Pedidos"+pedido1.alterarStatus(pedido1.getAlterarPedidosList()));
 
                 break;
                 case 0:
@@ -51,10 +57,10 @@ public class Menu {
             }
         }
     }
-    public static Usuario usuaioNovo(){
-        Usuario usuario = new Usuario("Caio","caiogarcia96@hotmail.com","123456");
-        return usuario;
-    }
+//    public static Usuario usuaioNovo(){
+//        Usuario usuario = new Usuario("Caio","caiogarcia96@hotmail.com","123456");
+//        return usuario;
+//    }
     public static void verPedidos(List<VerificarPedidos> verStatus){
         System.out.println("Size: " +verStatus.size());
         for (VerificarPedidos verificarPedidos: verStatus) {
@@ -67,12 +73,12 @@ public class Menu {
             System.out.println(mudarStatus);
         }
     }
-    public void novaVenda(){
-        if(!usuaioNovo().autenticarSenha()){
-            System.out.println("Operacao nao permitida - senha invalida ");
-        } else{
-            boolean var1 = true;
-            
-        }
-    }
+//    public void novaVenda(){
+//        if(!usuaioNovo().autenticarSenha()){
+//            System.out.println("Operacao nao permitida - senha invalida ");
+//        } else{
+//            boolean var1 = true;
+//
+//        }
+//    }
 }

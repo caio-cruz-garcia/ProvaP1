@@ -4,6 +4,14 @@ import com.company.Interface.Autenticar;
 
 import java.util.Scanner;
 
+/**
+ *  Classe ponto de entrada da aplicação base.<br>
+ *     Ela é responsável por criar um usuario com nome,email e senha, criando as instancias dos objetos por meio dela.
+ *     implementando a interface autenticação
+ * @author Caio Cruz Alfonso Garcia - caiogarcia96@hotmail.com
+ * @since 25/06/2020
+ * @version 1.0
+ */
 public class Usuario implements Autenticar {
     private String name;
     private String email;

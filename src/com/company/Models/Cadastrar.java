@@ -7,6 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ *  Classe.<br>
+ *     Ela é responsável por cadatrar o pedido de pizza gerarando um id, além de observa sua descriçao a partir da herança da descrição de pedido.
+ * @author Caio Cruz Alfonso Garcia - caiogarcia96@hotmail.com
+ * @since 25/06/2020
+ * @version 1.0
+ */
 public  class Cadastrar extends Descricao{
     private String id = this.geradorID();
     private List<Descricao> itens = new ArrayList();
