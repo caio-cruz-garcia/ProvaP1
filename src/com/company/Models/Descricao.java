@@ -2,9 +2,11 @@ package com.company.Models;
 
 import com.company.Enum.Pagamento;
 import com.company.Enum.Status;
+import com.company.Enum.Tipos;
 import com.company.Interface.AlterarStatus;
 import com.company.Interface.VerStatus;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -82,5 +84,14 @@ public class Descricao implements VerStatus, AlterarStatus {
 
     public List<AlterarPedidos> getAlterarPedidosList() {
         return alterarPedidosList;
+    }
+    public List<Pizza> pizzas() {
+        List<Pizza> newPizzas = new ArrayList<Pizza>();
+        for (Tipos tiposPizza : Tipos.values()) {
+            for (int verificarPedidos = 0; verificarPedidos < 5; verificarPedidos++) {
+                newPizzas.add(new Pizza(tiposPizza, verificarPedidos));
+            }
+            return newPizzas;
+        }
     }
 }

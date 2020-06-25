@@ -1,7 +1,6 @@
 package com.company.Models;
 
 import com.company.Enum.Pagamento;
-import com.company.Enum.Status;
 
 public class VerificarPedidos  {
     private Pagamento status;
